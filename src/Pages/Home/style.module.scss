@@ -1,0 +1,27 @@
+$cor-banner:rgb(162, 0, 255);
+
+.banner{
+  width: 100%;
+  img{
+    width: 100%;
+    height: 50vh;
+  }
+  &_text1{
+    position: absolute;
+    top: 30%;
+    left:5vw;
+    color:$cor-banner;
+    background: linear-gradient(90deg,rgba(230, 230, 230, 0.736),#fff);
+    padding: 15px;
+    border-radius: 30px 10px 30px 10px;
+  }
+  &_text2{
+    position: absolute;
+    top: 45%;
+    left:10vw;
+    color:$cor-banner;
+    background: linear-gradient(90deg,rgba(230, 230, 230, 0.736),#fff);
+    padding: 15px;
+    border-radius: 30px 10px 30px 10px;
+  }
+}
