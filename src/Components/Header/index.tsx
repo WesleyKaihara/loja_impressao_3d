@@ -10,7 +10,6 @@ export default function Header() {
           <li><a href='/' >Home</a></li>
           <li><a href='/Catalogo' >Catálogo</a></li>
           <li><a href='/Contato'>Contato</a></li>
-          <li><a href='/Sobre' >Sobre</a></li>
           <li><a href="/Login">Entrar/Cadastrar</a></li>
         </ul>
 
