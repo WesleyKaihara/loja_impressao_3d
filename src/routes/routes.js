@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Cadastrar from '../Pages/Cadastrar';
 import Conta from '../Pages/Conta';
+import Produto from '../Pages/Produto';
 
 function Rotas() {
   return (
@@ -14,6 +15,7 @@ function Rotas() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastrar" element={<Cadastrar />} />
         <Route path="/conta" element={<Conta />} />
+        <Route path="/Produto" element={<Produto />} />
       </Routes>
     </Router>
 
