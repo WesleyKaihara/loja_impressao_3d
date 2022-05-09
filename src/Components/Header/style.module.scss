@@ -1,6 +1,6 @@
 $corHeader:#ccc;
 $fontHeader: #ccc;
-$corPrincipal:rgb(0, 162, 255);
+$corPrincipal:rgb(162, 0, 255);
 
 .header{
   width: 100%;
@@ -28,6 +28,19 @@ $corPrincipal:rgb(0, 162, 255);
         transition: all .5s ease;
         &:hover{
           color: #0e2a47;
+        }
+      }
+      .btn{
+        background: $corPrincipal;
+        padding: 1vh 2vh;
+        border-radius: 35px;
+        transition: all .5s ease;
+        &:hover{
+          background: rgb(173, 31, 255);
+          transform: scale(1.03);
+        }
+        a{
+          color: #000;
         }
       }
     }

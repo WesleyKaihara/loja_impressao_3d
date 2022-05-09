@@ -1,15 +1,47 @@
 $corPrincipal :rgb(162, 0, 255) ;
 
+.btn{
+  background-color: $corPrincipal;
+  border:1px solid #ccc;
+  padding: 1.5vh 4vh;
+  border-radius: 50px;
+  transition: all .5s ease;
+  &:hover{
+    background: rgb(175, 37, 255);
+    transform: scale(1.05);
+    color: #333;
+  }
+}
 .produtos{
   background-image: url(../../images/Sprinkle.svg);
   width: 100%;
-  height: 110vh;
+  height: 160%;
   top: 16vh;
   position: absolute;
+  &_desc{
+    h1{
+      margin-top: 10vh;
+      color: #fff;
+      background: rgba(88, 88, 88, 0.366);
+      border-radius: 20px;
+      padding: 10px;
+      border:2px $corPrincipal;
+      border-style: dashed;
+      font-size:4vh;
+      display: flex;
+      align-items: center;
+      gap: 2vh;
+    }
+    p{
+      font-size: 2.5vh;
+      text-align: justify;
+      margin-top: 3vh;
+      color: #fff;
+    }
+  }
   .container{
     width: 90%;
-    padding: 5%;
-    height: 100vh;
+    padding: 5% 5% 10%;
     margin: 2vh auto;
     background: rgba(231, 231, 231, 0.315);
     border-radius: 30px;
@@ -20,21 +52,72 @@ $corPrincipal :rgb(162, 0, 255) ;
       img{
         width: 100%;
       }
+      .avaliacao{
+        margin-top: 12vh;
+        width: 70%;
+        float: right;
+      }
     }
   }
   &_info{
     width: 65%;
+    padding: 0 10vh;
+    display: flex;
+    flex-direction: column;
     .produto_name{
       text-align: center;
-      color: #333;
+      color: #ccc;
+    }
+    label {
+      font-size: 4.5vh;
+      font-weight: bold;
+      margin-right: 2vh;
+      color: #ccc;
     }
     .quantidade{
       width: 10%;
       padding: 1vh;
       font-size: 3vh;
+      height: 5vh;
+      background: rgba(255, 255, 255, 0.553);
+      border: none;
+      border-radius: 5px;
+      color: #333;
+    }
+    .valorAntigo{
+      text-decoration: line-through;
+      color: #ccc;
+      font-size: 3.5vh;
+      margin-top: 10vh;
+    }
+    .valorNovo{
+      font-size: 8vh;
+      font-weight: bold;
+      background: -webkit-linear-gradient(#eee, $corPrincipal);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .quantContainer{
+        .btn{
+          float: right;
+          margin-right: 5vh;
+        }
+        span{
+          color: #ccc;
+          margin-left: 1vh;
+          font-size: 3vh;
+          font-weight: bold;
+        }
+    }
+    .freteContainer{
+      margin-top: 5vh;
+      button{
+        float: right;
+        margin-right: 5vh;
+      }
     }
   }
-}
+} 
 
 .Cep{
  display: flex;
@@ -68,6 +151,7 @@ $corPrincipal :rgb(162, 0, 255) ;
      p{
        text-align: center;
        font-weight: bold;
+       color: #fff;
      }
    }
  }
