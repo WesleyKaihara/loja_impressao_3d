@@ -19,7 +19,6 @@ export default function Contato() {
         </div>
       </div>
       <img src={imgEmpresa} alt="Empresa" className={style.imgEmpresa} />
-
     </section>
   )
 }

@@ -61,6 +61,14 @@ export default function Produto() {
     });
   }
 
+  function CodigoCorreio(codigoCorreios) {
+    if (codigoCorreios === '04014') {
+      return "SEDEX";
+    } else if (codigoCorreios === '04510') {
+      return "PAC";
+    }
+  }
+
   return (
     <section className={style.produtos}>
       <div className={style.container}>
@@ -143,7 +151,7 @@ export default function Produto() {
                   {
                     valoresEnvio.map(e => (
                       <tr key={e.Codigo} className={style.Valores}>
-                        <td>{e.Codigo}</td>
+                        <td>{CodigoCorreio(e.Codigo)}</td>
                         <td>R$ {e.Valor}</td>
                         <td>{e.PrazoEntrega} dias</td>
                       </tr>

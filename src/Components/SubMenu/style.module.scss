@@ -1,0 +1,33 @@
+$corPrincipal:rgb(114, 0, 181);
+$corSecundaria:#102a49;
+.subMenu{
+  background: $corSecundaria;
+  height: 100vh;
+  .itens{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 15vh;
+    align-items: center;
+  }
+  &_pesquisa{
+    width: 40% !important;
+  }
+  a{
+    text-decoration: none;
+  }
+  .categorias{
+    width: 40%;
+      display: flex;
+      justify-content: space-around;
+    &_item{
+      font-size: 2.5vh;
+      color: $corPrincipal;
+      font-weight: bold;
+      transition: all .5s ease;
+      &:hover{
+        color:rgb(141, 2, 221) ;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
