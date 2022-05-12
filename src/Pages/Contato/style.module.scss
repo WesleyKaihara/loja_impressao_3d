@@ -1,0 +1,45 @@
+$corFonte: #ccc;
+$corPrincipal:rgb(162, 0, 255);
+.Contato{
+  background-image: url(../../images/Sprinkle.svg);
+  height: 71.8vh;
+  &_info{
+    color: $corFonte;
+    font-size:2.8vh ;
+    transition: all .5s ease;
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+  }
+  .container{
+    width: 70%;
+    margin: 8vh auto;
+  }
+  .title{
+    text-align: center;
+    color: $corFonte;
+  }
+  .subTitle{
+    color:$corFonte;
+  }
+  a{
+    text-decoration: none;
+  }
+  .redeSociais{
+    display: flex;
+    gap: 5vw;
+    margin-top: 5vh;
+    .Contato_info:hover{
+      color: $corPrincipal;
+      transform: scale(1.05);
+    }
+  }
+  .imgEmpresa{
+    position: absolute;
+    right: 20vw;
+    top: 30vh;
+    width: 20vw;
+    height: 20vw;
+  }
+
+}

@@ -12,6 +12,7 @@ export default function Login() {
           <label htmlFor="email">Email</label>
           <input
             className={style.campoDados}
+            placeholder="nome@gmail.com"
             type="email"
             name="email"
             id="email"
@@ -20,6 +21,7 @@ export default function Login() {
           <label htmlFor="senha">Senha</label>
           <input
             className={style.campoDados}
+            placeholder="Digite sua senha"
             type="password"
             name="senha"
             id="senha"

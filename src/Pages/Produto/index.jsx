@@ -12,13 +12,15 @@ const { calcularPrecoPrazo } = require('correios-brasil');
 
 
 export default function Produto() {
-  // const [cep, setCep] = useState('');
+  const [cep, setCep] = useState('');
   const [dadosCorreios, setDadosCorreios] = useState({});
   const [valoresEnvio] = useState([]);
+  const [disabled, setDisabled] = useState(true);
+
 
   let args = {
-    sCepOrigem: '81200100',
-    sCepDestino: '21770200',
+    sCepOrigem: cep,
+    sCepDestino: '02340010',
     nVlPeso: '1',
     nCdFormato: '1',
     nVlComprimento: '20',
@@ -34,13 +36,16 @@ export default function Produto() {
   const handleShow = () => setShow(true);
 
   //Verifica Cep
-  // function PegaCep(e: string) {
-  //   let value = e.target.value;
-  //   setCep(value);
-  //   if (e.keyCode === 13) {
-  //     ConsultaCep(value);
-  //   }
-  // }
+  function PegaCep(e: string) {
+    let value = e.target.value;
+    setCep(value);
+    if (value.length >= 8) {
+      setDisabled(false);
+    }
+    if (e.keyCode === 13) {
+      CalcValor(value);
+    }
+  }
 
   //devolve valores do calculo de frete
   function getValores(res, quant) {
@@ -118,7 +123,7 @@ export default function Produto() {
               name="cep"
               id="cep"
               placeholder='Digite seu CEP'
-            // onKeyUp={(e) => PegaCep(e)}
+              onKeyUp={(e) => PegaCep(e)}
             />
             <section className={style.valorEntregas}>
               <table>
@@ -157,7 +162,7 @@ export default function Produto() {
           </Button>
           <Button variant="primary" onClick={() => {
             CalcValor(args);
-          }}>
+          }} disabled={disabled}>
             Calcular Frete
           </Button>
         </Modal.Footer>
